@@ -1,16 +1,20 @@
-<pre>{{f.value | json}}</pre>
+<pre>value:{{f.value | json}}</pre>
+<pre>status:{{f.form.status}}</pre>
+<pre>name status:{{f.controls.username?.invalid}}</pre>
+
 <section>
   <div class="container-fluid">
     <h5 class="mt0">Classic form controls and custom variants</h5>
     <p class="mb-lg">Standard Bootstrap form and input controls with customized UI variations</p>
     <div class="card">
       <div class="card-body">
-        <form method="get" action="/" class="form-horizontal" #f="ngForm">
+        <form method="get" action="/" class="form-horizontal" #f="ngForm" noValidate>
           <fieldset>
             <div class="form-group" [ngClass]="{'has-error': n.invalid && n.dirty}" >
               <label class="col-sm-2 control-label">Rounded Corners</label>
               <div class="col-sm-10">
                 <input type="text" name="username" class="form-control rounded" ngModel #n="ngModel" required>
+                <button type="submit">送出</button>
                 <pre>dirty:{{n.dirty}}</pre>
                 <pre>invalid:{{n.invalid}}</pre>
               </div>
