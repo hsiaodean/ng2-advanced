@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -10,6 +10,7 @@ import { CardsComponent } from './cards/cards.component';
 
 import { HomeComponent } from './home/home.component';
 import { Page2Component } from './page2/page2.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { Page2Component } from './page2/page2.component';
     DashboardComponent,
     CardsComponent,
     HomeComponent,
-    Page2Component
+    Page2Component,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

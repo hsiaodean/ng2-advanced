@@ -1,4 +1,5 @@
 
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route } from '@angular/router';
 
@@ -6,6 +7,7 @@ import { CardsComponent } from './cards/cards.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 // import { Page2Component } from './page2/page2.component';
 // import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
 import { fallbackroute } from './shared/fallback-route';
 
 
@@ -14,6 +16,7 @@ const routes: Routes = [
   // {path: 'home',component: HomeComponent,},
   // {path:'page2',component: Page2Component},
   {path:'', redirectTo:'/dashboard', pathMatch:'full'},
+  {path:'form', component:FormComponent},
   {path:'dashboard',component: DashboardComponent},
   {path:'cards/:type',component: CardsComponent},
   {path:'charts/:username', loadChildren:'./charts/charts.module#ChartsModule'},
