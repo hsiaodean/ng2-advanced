@@ -1,5 +1,5 @@
 <pre>value:{{f.value | json}}</pre>
-<pre>status:{{f.form.status}}</pre>
+<pre>form status:{{f.form.valid}}</pre>
 <pre>name status:{{f.controls.username?.invalid}}</pre>
 
 <section>
@@ -20,11 +20,16 @@
               </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset ngModelGroup="group1" #group1="ngModelGroup"> 
+            <!--sub1有值 sub2必填. !! 兩個驚嘆號為強制轉型為boolean -->
             <div class="form-group">
               <label class="col-sm-2 control-label">With help</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control"><span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                <input type="text" class="form-control" name="sub1" ngModel #sub1><span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+              </div>
+              <label class="col-sm-2 control-label">With help</label>
+               <div class="col-sm-10">
+                <input type="text" class="form-control" name="sub2" ngModel [required]="!!sub1.value"><span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
               </div>
             </div>
           </fieldset>
