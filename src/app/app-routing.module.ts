@@ -1,3 +1,4 @@
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 import { NgModule } from '@angular/core';
@@ -15,8 +16,9 @@ const routes: Routes = [
   // {path:'', redirectTo:'/home', pathMatch:'full'},
   // {path: 'home',component: HomeComponent,},
   // {path:'page2',component: Page2Component},
-  {path:'', redirectTo:'/dashboard', pathMatch:'full'},
+  // {path:'', redirectTo:'/dashboard', pathMatch:'full'},
   {path:'form', component:FormComponent},
+  {path:'reactiveform', component:ReactiveformComponent},
   {path:'dashboard',component: DashboardComponent},
   {path:'cards/:type',component: CardsComponent},
   {path:'charts/:username', loadChildren:'./charts/charts.module#ChartsModule'},

@@ -11,6 +11,7 @@ import { CardsComponent } from './cards/cards.component';
 import { HomeComponent } from './home/home.component';
 import { Page2Component } from './page2/page2.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormComponent } from './form/form.component';
     CardsComponent,
     HomeComponent,
     Page2Component,
-    FormComponent
+    FormComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
